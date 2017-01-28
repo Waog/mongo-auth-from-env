@@ -13,5 +13,5 @@ sed -i "s/USER_NAME_PLACEHOLDER/$MONGO_AUTH_USER_NAME/g" /mongoAuthFromEnv/creat
 sed -i "s/USER_PW_PLACEHOLDER/$MONGO_AUTH_USER_PW/g" /mongoAuthFromEnv/createUser.js
 sed -i "s/USER_DB_PLACEHOLDER/$MONGO_AUTH_USER_DB/g" /mongoAuthFromEnv/createUser.js
 
-TODO: create the users in the database
+# create the user in the database
 mongo -u "$MONGO_AUTH_ADMIN_NAME" -p "$MONGO_AUTH_ADMIN_PW" --authenticationDatabase "admin" mongod/$MONGO_AUTH_USER_DB createUser.js
