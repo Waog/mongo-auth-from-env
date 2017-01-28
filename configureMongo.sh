@@ -6,7 +6,7 @@ sed -i "s/ADMIN_NAME_PLACEHOLDER/$MONGO_AUTH_ADMIN_NAME/g" /mongoAuthFromEnv/cre
 sed -i "s/ADMIN_PW_PLACEHOLDER/$MONGO_AUTH_ADMIN_PW/g" /mongoAuthFromEnv/createAdmin.js
 
 # create the admin in the database
-mongo mongod/admin createAdmin.js
+mongo mongod/admin /mongoAuthFromEnv/createAdmin.js
 
 # TODO: configure users
 # TODO: create the users in the database
